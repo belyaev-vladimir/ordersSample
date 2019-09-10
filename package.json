@@ -1,0 +1,47 @@
+{
+    "name": "orders-sample",
+    "description": "",
+    "version": "1.0.0",
+    "author": "Belyaev Vladimir <belyaev.mob@gmail.com>",
+    "contributors": [],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/belyaev-vladimir/ordersSample.git"
+    },
+    "bugs": "http://github.com/belyaev-vladimir/ordersSample/issues",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
+    "dependencies": {
+        "bluebird": "^3.5.5",
+        "body-parser": "^1.15.0",
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "cors": "^2.8.5",
+        "db-migrate": "^0.11.6",
+        "db-migrate-sqlite3": "^0.4.0",
+        "express": "^4.0.0",
+        "http-status-codes-js": "^1.0.1",
+        "mocha": "^6.2.0",
+        "nconf": "^0.10.0",
+        "nyc": "^14.1.1",
+        "sqlite3": "^4.1.0",
+        "swagger-ui-express": "^4.0.7",
+        "swaggerize-express": "^4.0.5",
+        "swagmock": "~0.0.2",
+        "winston": "^3.2.1"
+    },
+    "devDependencies": {
+        "eslint": "^2",
+        "tape": "^4",
+        "istanbul": "^0.4.5",
+        "is-my-json-valid": "^2.13.1",
+        "js-yaml": "^3.2.6",
+        "supertest": "^1.2.0",
+        "swagger-parser": "^3.4.1"
+    },
+    "scripts": {
+        "test": "mocha 'tests/**/*.js'"
+    },
+    "main": "./server"
+}
