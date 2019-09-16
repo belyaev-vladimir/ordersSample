@@ -1,6 +1,5 @@
 'use strict';
 
-// const nconf = require('nconf');
 const path = require('path');
 
 class Config {
@@ -16,7 +15,7 @@ class Config {
     }
 
     get(key) {
-        return  this.nconf.get(key);
+        return this.nconf.get(key);
     }
 
     set(key, value) {

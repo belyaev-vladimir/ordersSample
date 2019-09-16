@@ -11,7 +11,7 @@ exports.setup = (options, seedLink) => {
 
 exports.up = async(db) => {
     return db.runSql(
-            `
+        `
                 INSERT INTO 'orders'
                 VALUES (1, 'abcdes', 'qwerty@ya.ru', '+7915', '100.00', 'USD', '2017-03-14 09:59:13'),
                        (2, 'qazwsx', 'qsc@ya.ru', '+375', '99.00', 'EUR', '2017-03-14 09:59:15'),

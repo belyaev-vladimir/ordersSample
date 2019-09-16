@@ -1,0 +1,22 @@
+<h1>Список пассажиров</h1>
+    <a href="/orders" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Вернуться к заказам</a>
+
+    <table class="table">
+         <thead><tr>
+        <th>Номер заказа</th>
+        <th>Локатор</th>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        </tr></thead>
+        {{#each passengers}}
+          <tbody>
+            <tr>
+                <td>{{this.ID}}</td>
+                <td>{{this.locator}}</a>
+                </td>
+                        <td>{{this.name_second}}</td>
+                        <td>{{this.name_first}}</td></td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
