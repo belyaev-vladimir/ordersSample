@@ -1,0 +1,25 @@
+<h1>Список заказов</h1>
+    <table class="table">
+         <thead><tr>
+        <th>Номер заказа </th>
+        <th>Локатор </th>
+        <th>Дата последнего обновления </th>
+        <th>Стоимость в рублях </th>
+        <th>Стоимость в валюте заказа </th>
+        <th>Количество пассажиров </th>
+        </tr></thead>
+        {{#each orders}}
+          <tbody>
+            <tr>
+                <td>{{this.ID}}</td>
+                <td>
+                <a href="{{this.locator}}" class="btn btn-info" role="button">{{this.locator}}</a>
+                </td>
+                        <td>{{this.date_update}}</td>
+                        <td>{{this.local_price}}</td>
+                        <td>{{this.base_price}}</td>
+                        <td>{{this.order_passengers}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>

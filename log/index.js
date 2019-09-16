@@ -1,3 +1,5 @@
+'use strict';
+
 // создает объект лога - этот модуль подключаем во всех остальных где нужен лог
 const {createLogger, format, transports} = require('winston');
 const {combine, timestamp, label, printf} = format;
