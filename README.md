@@ -59,4 +59,4 @@
 
 Покрытие тестами:
 
-![image](https://user-images.githubusercontent.com/18545939/64964779-67401580-d8a4-11e9-99e6-9589ca2a7bde.png)
+![image](https://user-images.githubusercontent.com/18545939/64967695-a886f400-d8a9-11e9-89c0-d6b0ff7095dd.png)
