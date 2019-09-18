@@ -14,7 +14,7 @@ class CbrController {
             let client = await soap.createClient(config['wsdl']);
             let res = await client[config['method']]({On_date: dateFormat(new Date(), 'yyyy-mm-dd')});
 
-            //перодставляю результат в удобном виде
+            //представляю результат в удобном виде
             return _.get(res,
                 'GetCursOnDateXMLResult' +
                 '.ValuteData' +
