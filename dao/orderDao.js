@@ -4,17 +4,17 @@ const
     log = require('../log')(module),
     DaoCommon = require('./common/daoCommon');
 
-class OrderDao extends DaoCommon {
+class OrderDao {
 
     static async findOrders() {
-        return await OrderDao.all(
+        return await DaoCommon.all(
             'select * from orders'
         );
     }
 
     static async findActualOrders() {
 
-        return await OrderDao.all(
+        return await DaoCommon.all(
             'select * from tmp_orders_state'
         );
     }
@@ -22,7 +22,7 @@ class OrderDao extends DaoCommon {
     static async getPassengersList(locator) {
 
         let sqlParams = {$locator: locator};
-        return await OrderDao.all(
+        return await DaoCommon.all(
             `select o.id,
                     o.locator,
                     o.price,
@@ -37,7 +37,7 @@ class OrderDao extends DaoCommon {
     }
 
     static async findOrdersWithPassengersCount() {
-        return await OrderDao.all(
+        return await DaoCommon.all(
             `select o.id,
                     o.locator,
                     o.price,
@@ -63,7 +63,7 @@ class OrderDao extends DaoCommon {
                 };
             }));
 
-        return await OrderDao.bulkinsert(`insert or replace into tmp_orders_state
+        return await DaoCommon.bulkinsert(`insert or replace into tmp_orders_state
              values 
               ($ID, $locator, DATE('now'), $local_price, $base_price, $order_passengers )`,
             sqlParams);
@@ -72,12 +72,12 @@ class OrderDao extends DaoCommon {
 
     static async clearTempOrders() {
 
-        let stmt = OrderDao.stmtPrepare(
+        let stmt = DaoCommon.stmtPrepare(
             `delete from tmp_orders_state as t
              where  t.ID not in (select ID from orders)`);
 
         try {
-            await OrderDao.stmtRun(stmt, {});
+            await DaoCommon.stmtRun(stmt, {});
 
             return true;
         } catch (err) {
