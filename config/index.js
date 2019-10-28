@@ -1,6 +1,8 @@
 'use strict';
 
-const path = require('path');
+const
+nconf = require('nconf'), 
+path = require('path');
 
 class Config {
 
