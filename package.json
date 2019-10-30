@@ -39,7 +39,7 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "eslint": "^2",
+    "eslint": "^6",
     "tape": "^4",
     "istanbul": "^0.4.5",
     "is-my-json-valid": "^2.13.1",
